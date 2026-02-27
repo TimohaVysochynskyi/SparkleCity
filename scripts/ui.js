@@ -232,11 +232,115 @@
     }
   }
 
+  function initCursorTrail() {
+    if (prefersReducedMotion) {
+      return;
+    }
+
+    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      return;
+    }
+
+    var body = document.body;
+    if (!body) {
+      return;
+    }
+
+    var layer = document.createElement("div");
+    layer.className = "cursor-trail";
+    layer.setAttribute("aria-hidden", "true");
+
+    var dots = [];
+    var points = [];
+    var trailLength = 10;
+    var baseSize = 17;
+    var follow = 0.48;
+    var targetX = window.innerWidth / 2;
+    var targetY = window.innerHeight / 2;
+    var now = Date.now();
+    var lastMoveTime = now;
+    var hasPointer = false;
+    var isInside = false;
+    var tailVisibility = 0;
+    var headVisibility = 0;
+
+    for (var i = 0; i < trailLength; i += 1) {
+      var dot = document.createElement("span");
+      dot.className = "cursor-trail__dot";
+      layer.appendChild(dot);
+      dots.push(dot);
+      points.push({ x: targetX, y: targetY });
+    }
+
+    body.appendChild(layer);
+
+    function onPointerMove(event) {
+      targetX = event.clientX;
+      targetY = event.clientY;
+      lastMoveTime = Date.now();
+      hasPointer = true;
+      isInside = true;
+    }
+
+    function onPointerLeave() {
+      isInside = false;
+    }
+
+    function onVisibilityChange() {
+      if (document.hidden) {
+        isInside = false;
+      }
+    }
+
+    function animate() {
+      var currentTime = Date.now();
+      var idle = currentTime - lastMoveTime > 120;
+      var targetTailVisibility = hasPointer && isInside && !idle ? 1 : 0;
+      var targetHeadVisibility = hasPointer && isInside ? 1 : 0;
+
+      tailVisibility += (targetTailVisibility - tailVisibility) * 0.12;
+      headVisibility += (targetHeadVisibility - headVisibility) * 0.18;
+
+      points[0].x += (targetX - points[0].x) * follow;
+      points[0].y += (targetY - points[0].y) * follow;
+
+      for (var j = 1; j < trailLength; j += 1) {
+        points[j].x += (points[j - 1].x - points[j].x) * follow;
+        points[j].y += (points[j - 1].y - points[j].y) * follow;
+      }
+
+      for (var k = 0; k < trailLength; k += 1) {
+        var progress = 1 - k / trailLength;
+        var size = baseSize * (0.38 + progress * 0.62);
+        var alpha =
+          k === 0
+            ? (0.74 + progress * 0.22) * headVisibility
+            : (0.46 + progress * 0.42) * tailVisibility;
+        var x = points[k].x - size / 2;
+        var y = points[k].y - size / 2;
+
+        dots[k].style.width = size + "px";
+        dots[k].style.height = size + "px";
+        dots[k].style.opacity = alpha.toFixed(3);
+        dots[k].style.transform =
+          "translate3d(" + x.toFixed(2) + "px, " + y.toFixed(2) + "px, 0)";
+      }
+
+      window.requestAnimationFrame(animate);
+    }
+
+    window.addEventListener("pointermove", onPointerMove, { passive: true });
+    window.addEventListener("pointerleave", onPointerLeave, { passive: true });
+    document.addEventListener("visibilitychange", onVisibilityChange);
+    animate();
+  }
+
   $doc.ready(function () {
     initMobileMenu();
     initMessengerPopup();
     initFormConsent();
     initParallax();
     initPreloader();
+    initCursorTrail();
   });
 })(jQuery);

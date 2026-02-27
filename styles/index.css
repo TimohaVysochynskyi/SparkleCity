@@ -138,6 +138,27 @@ p {
   pointer-events: none;
 }
 
+.cursor-trail {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1999;
+}
+
+.cursor-trail__dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--primary);
+  opacity: 0;
+  -webkit-transform: translate3d(-9999px, -9999px, 0);
+  transform: translate3d(-9999px, -9999px, 0);
+  will-change: transform, opacity;
+}
+
 @media (max-width: 767px) {
   main {
     margin-top: 0;
@@ -145,6 +166,10 @@ p {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .cursor-trail {
+    display: none;
+  }
+
   html {
     scroll-behavior: auto;
   }
