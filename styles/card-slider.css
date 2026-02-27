@@ -1,4 +1,5 @@
 .info-slider {
+  margin-top: clamp(52px, 7vw, 84px);
   padding-bottom: clamp(24px, 6vw, 40px);
 }
 .info-slider__wrapper {
@@ -7,7 +8,7 @@
 .info-slider__wrapper .swiper-slide {
   opacity: 1 !important;
   padding: clamp(32px, 6vw, 70px) clamp(18px, 5vw, 40px) clamp(24px, 4vw, 35px);
-  border-radius: 0 0 40px 40px;
+  border-radius: 40px;
   -webkit-backdrop-filter: blur(80px);
   backdrop-filter: blur(80px);
   background: linear-gradient(
@@ -33,13 +34,21 @@
   font-size: clamp(14px, 1.4vw, 18px);
 }
 
+.info-slider__wrapper .swiper-slide h5 {
+  max-width: min(860px, 100%);
+  font-size: clamp(22px, 2.8vw, 32px);
+  font-weight: 600;
+  color: var(--primary);
+}
+
 .cards-slider {
   padding: clamp(40px, 8vw, 80px) 0 clamp(36px, 6vw, 60px);
   overflow: hidden;
 }
 
 .cards-slider__title {
-  font-size: clamp(22px, 3vw, 35px);
+  font-size: clamp(24px, 3.2vw, 38px);
+  font-weight: 600;
   text-align: center;
   color: var(--primary);
   margin: 0 0 clamp(18px, 4vw, 30px);
@@ -133,7 +142,7 @@
 
 .cards-slider__wrapper .reviews-nav .arrow {
   --active: var(--primary);
-  --border: rgba(107, 63, 214, 0.2);
+  --border: rgba(107, 63, 214, 0.12);
   display: block;
   position: absolute;
   width: 50px;
@@ -187,12 +196,38 @@
   content: "";
   display: block;
   position: absolute;
-  left: 1px;
-  right: 1px;
-  top: 1px;
-  bottom: 1px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   border-radius: 50%;
-  border: 3px solid var(--border);
+  border: 2px solid var(--border);
+}
+
+.cards-slider__wrapper .reviews-nav .arrow:before {
+  -webkit-transition:
+    border-color 0.35s ease,
+    -webkit-box-shadow 0.35s ease;
+  transition:
+    border-color 0.35s ease,
+    -webkit-box-shadow 0.35s ease;
+  transition:
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+  transition:
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    -webkit-box-shadow 0.35s ease;
+}
+
+.cards-slider__wrapper .reviews-nav .arrow:after {
+  display: none;
+}
+
+.cards-slider__wrapper .reviews-nav .arrow:hover:before {
+  border-color: rgba(107, 63, 214, 0.22);
+  -webkit-box-shadow: 0 8px 18px rgba(75, 42, 166, 0.18);
+  box-shadow: 0 8px 18px rgba(75, 42, 166, 0.18);
 }
 
 .cards-slider__wrapper .reviews-nav .arrow svg {
@@ -203,24 +238,22 @@
   top: 0;
 }
 
-.cards-slider__wrapper .reviews-nav .arrow svg circle {
+.cards-slider__wrapper .reviews-nav .arrow svg path {
   fill: none;
   stroke: var(--active);
   stroke-width: 3px;
+  stroke-linecap: round;
 }
 
-.cards-slider__wrapper .reviews-nav .arrow .circle circle {
-  width: 50px;
-  height: 50px;
-  display: block;
-  position: relative;
-  z-index: 1;
-  color: var(--active);
-  stroke-width: 3px;
-  stroke-dashoffset: 0;
-  stroke-dasharray: none;
-  -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
+.cards-slider__wrapper .reviews-nav .arrow .circle {
+  pointer-events: none;
+}
+
+.cards-slider__wrapper .reviews-nav .arrow .circle .arc {
+  opacity: 0;
+  stroke-dasharray: 0 63;
+  -webkit-transition: opacity 0.28s ease;
+  transition: opacity 0.28s ease;
 }
 
 .cards-slider__wrapper .reviews-nav .arrow.animate:before,
@@ -230,24 +263,40 @@
   box-shadow: none;
 }
 
-.cards-slider__wrapper .reviews-nav .arrow.animate .circle circle {
+.cards-slider__wrapper .reviews-nav .arrow.animate .circle .arc-top {
+  opacity: 1;
+  -webkit-animation: borderArcTop 1.05s ease forwards;
+  animation: borderArcTop 1.05s ease forwards;
+}
+
+.cards-slider__wrapper .reviews-nav .arrow.animate .circle .arc-bottom {
+  opacity: 1;
+  -webkit-animation: borderArcBottom 1.05s ease forwards;
+  animation: borderArcBottom 1.05s ease forwards;
+}
+
+.cards-slider__wrapper .reviews-nav .arrow.fading .circle .arc {
+  opacity: 0;
+}
+
+.cards-slider__wrapper .reviews-nav .arrow:not(.animate) .circle .arc {
   -webkit-animation: none;
   animation: none;
 }
 
 .cards-slider__wrapper .reviews-nav .arrow.animate i {
-  -webkit-animation: arrow 1.6s ease forwards;
-  animation: arrow 1.6s ease forwards;
+  -webkit-animation: arrow 1.05s ease forwards;
+  animation: arrow 1.05s ease forwards;
 }
 
 .cards-slider__wrapper .reviews-nav .arrow.animate i:before {
-  -webkit-animation: arrowUp 1.6s ease forwards;
-  animation: arrowUp 1.6s ease forwards;
+  -webkit-animation: arrowUp 1.05s ease forwards;
+  animation: arrowUp 1.05s ease forwards;
 }
 
 .cards-slider__wrapper .reviews-nav .arrow.animate i:after {
-  -webkit-animation: arrowDown 1.6s ease forwards;
-  animation: arrowDown 1.6s ease forwards;
+  -webkit-animation: arrowDown 1.05s ease forwards;
+  animation: arrowDown 1.05s ease forwards;
 }
 
 @media (max-width: 1199px) {
@@ -356,6 +405,50 @@
   }
 }
 
+@-webkit-keyframes borderArcTop {
+  0% {
+    opacity: 1;
+    stroke-dasharray: 0 63;
+  }
+  100% {
+    opacity: 1;
+    stroke-dasharray: 63 63;
+  }
+}
+
+@keyframes borderArcTop {
+  0% {
+    opacity: 1;
+    stroke-dasharray: 0 63;
+  }
+  100% {
+    opacity: 1;
+    stroke-dasharray: 63 63;
+  }
+}
+
+@-webkit-keyframes borderArcBottom {
+  0% {
+    opacity: 1;
+    stroke-dasharray: 0 63;
+  }
+  100% {
+    opacity: 1;
+    stroke-dasharray: 63 63;
+  }
+}
+
+@keyframes borderArcBottom {
+  0% {
+    opacity: 1;
+    stroke-dasharray: 0 63;
+  }
+  100% {
+    opacity: 1;
+    stroke-dasharray: 63 63;
+  }
+}
+
 @media (max-width: 991px) {
   .cards-slider {
     padding: clamp(40px, 8vw, 65px) 0 clamp(32px, 6vw, 60px);
@@ -377,7 +470,7 @@
 
 @media (max-width: 767px) {
   .info-slider__wrapper .swiper-slide h5 {
-    font-size: clamp(20px, 5vw, 23px);
+    font-size: clamp(21px, 5.2vw, 24px);
   }
   .cards-slider__wrapper .swiper .item__bg {
     max-width: 100%;

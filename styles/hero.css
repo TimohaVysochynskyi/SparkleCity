@@ -1,5 +1,10 @@
 .about-banner {
   position: relative;
+  padding-top: 0;
+}
+
+.about-banner .container {
+  position: relative;
 }
 .about-banner__wrapper {
   display: -webkit-box;
@@ -11,9 +16,10 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  gap: clamp(16px, 3vw, 28px);
+  gap: clamp(28px, 5vw, 56px);
   padding: clamp(24px, 4vw, 32px) clamp(20px, 7vw, 96px) 0
     clamp(20px, 8vw, 140px);
+  padding-top: calc(clamp(24px, 4vw, 32px) + 75px);
   -webkit-backdrop-filter: blur(80px);
   backdrop-filter: blur(80px);
   background: linear-gradient(
@@ -21,15 +27,20 @@
     rgba(255, 255, 255, 0.4) 0%,
     rgba(255, 255, 255, 0.47) 100%
   );
-  border-radius: 0;
+  border-radius: 0 0 40px 40px;
   overflow: hidden;
   position: relative;
+  min-height: clamp(460px, 50vh, 680px);
 }
 .about-banner__wrapper .left {
-  max-width: min(496px, 100%);
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 0;
+  flex: 1 1 0;
+  max-width: min(560px, 100%);
 }
 .about-banner__wrapper .left h1 {
-  font-size: clamp(28px, 4vw, 44px);
+  font-size: clamp(30px, 4.2vw, 48px);
+  font-weight: 600;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -37,13 +48,28 @@
   text-align: center;
   color: var(--primary);
 }
-.about-banner__wrapper img {
-  width: clamp(220px, 32vw, 420px);
-  max-width: 55%;
+.about-banner__wrapper picture {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 clamp(260px, 36vw, 560px);
+  flex: 0 0 clamp(260px, 36vw, 560px);
+  width: clamp(260px, 36vw, 560px);
   aspect-ratio: 1 / 1;
-  height: auto;
-  max-height: 55vh;
+  align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.about-banner__wrapper img {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  height: 100%;
+  max-height: none;
   object-fit: contain;
+  object-position: center;
   display: block;
 }
 .about-banner__wrapper .parallax-block {
@@ -59,6 +85,48 @@
   filter: blur(75px);
   z-index: -1;
   will-change: transform;
+}
+
+.about-banner__scroll {
+  position: absolute;
+  left: 50%;
+  bottom: -50px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 72px;
+  height: 72px;
+  border-radius: 0 0 36px 36px;
+  -webkit-backdrop-filter: blur(80px);
+  backdrop-filter: blur(80px);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.47) 100%
+  );
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 4;
+}
+
+.about-banner__scroll svg {
+  width: 36px;
+  height: 36px;
+  display: block;
+}
+
+.about-banner__scroll svg path {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .custom__download__btn {
@@ -393,10 +461,14 @@
 @media (max-width: 1199px) {
   .about-banner__wrapper {
     padding: clamp(28px, 5vw, 40px) clamp(20px, 6vw, 40px) 0;
+    padding-top: calc(clamp(28px, 5vw, 40px) + 75px);
   }
 }
 
 @media (max-width: 991px) {
+  .about-banner__scroll {
+    display: none;
+  }
   .about-banner__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -405,14 +477,25 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: clamp(48px, 10vw, 80px) clamp(20px, 8vw, 56px) 0;
+    padding: calc(clamp(48px, 10vw, 80px) + 20px) clamp(20px, 8vw, 56px) 0;
     overflow: unset;
+    min-height: auto;
   }
   .about-banner__wrapper .left h1 {
     margin-bottom: 10px;
   }
+  .about-banner__wrapper picture {
+    align-self: auto;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
   .about-banner__wrapper img {
+    width: min(100%, 420px);
     max-width: min(100%, 420px);
+    height: auto;
+    max-height: 65vh;
+    object-fit: contain;
   }
   .about-banner__wrapper .parallax-block {
     top: unset;
@@ -425,8 +508,13 @@
   .about-banner {
     padding-bottom: clamp(56px, 12vw, 84px);
   }
+  .about-banner__scroll {
+    width: 70px;
+    height: 44px;
+    bottom: -40px;
+  }
   .about-banner__wrapper {
-    padding: clamp(48px, 12vw, 80px) clamp(12px, 4vw, 20px) 0;
+    padding: calc(clamp(48px, 12vw, 80px) + 18px) clamp(12px, 4vw, 20px) 0;
     gap: clamp(6px, 2vw, 12px);
     position: relative;
   }
@@ -444,7 +532,7 @@
   .about-banner__wrapper .left .custom__download__btn {
     position: absolute;
     left: 0;
-    bottom: clamp(-76px, -14vw, -60px);
+    bottom: clamp(-98px, -16vw, -74px);
     width: 100%;
   }
   .about-banner__wrapper .left .custom__download__btn ul {
@@ -465,6 +553,7 @@
   .about-banner__wrapper .left .custom__download__btn {
     width: calc(100% + 30px);
     margin: 0 -15px;
+    bottom: clamp(-106px, -18vw, -86px);
   }
   .custom__download__btn ul {
     font-size: clamp(14px, 4vw, 16px);

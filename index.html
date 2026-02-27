@@ -108,14 +108,8 @@
         <div class="container">
             <a href="#" class="site-header__logo">
                 <picture>
-                    <source type="image/webp" srcset="./assets/images/optimized/logo/logo-220.webp">
-                    <img src="./assets/images/optimized/logo/logo-220.png" alt="Sparkle City" decoding="async"
-                        width="220" height="39">
+                    <img src="./assets/images/logo.png" alt="Sparkle City" decoding="async" width="220" height="39">
                 </picture>
-            </a>
-            <a href="tel:14258006565" class="site-header__phone" aria-label="Call Sparkle City">
-                <img src="./assets/svg/phone-green.svg" alt="Phone" decoding="async">
-                (425) 800-6565
             </a>
 
             <div class="desktop-main-menu">
@@ -125,6 +119,35 @@
                     <li class="menu-item"><a href="#additional-services">Additional Services</a></li>
                     <li class="menu-item"><a href="#order-service">Order a Service</a></li>
                 </ul>
+            </div>
+
+            <div class="site-header__right" aria-label="Header contacts and social links">
+                <a href="mailto:team@sparklecity.org" class="site-header__email">team@sparklecity.org</a>
+                <div class="site-header__socials">
+                    <a href="#" class="site-header__social" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor"
+                                stroke-width="1.8" />
+                            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8" />
+                            <circle cx="17.2" cy="6.8" r="1.2" fill="currentColor" />
+                        </svg>
+                    </a>
+                    <a href="#" class="site-header__social" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path
+                                d="M21 12c0 2.8-.3 4.4-.8 5.2-.5.9-1.4 1.2-3.2 1.4C15.7 18.8 14 19 12 19s-3.7-.2-5-.4c-1.8-.2-2.7-.5-3.2-1.4C3.3 16.4 3 14.8 3 12s.3-4.4.8-5.2C4.3 5.9 5.2 5.6 7 5.4 8.3 5.2 10 5 12 5s3.7.2 5 .4c1.8.2 2.7.5 3.2 1.4.5.8.8 2.4.8 5.2Z"
+                                fill="none" stroke="currentColor" stroke-width="1.8" />
+                            <path d="m10 9 5 3-5 3V9Z" fill="currentColor" />
+                        </svg>
+                    </a>
+                    <a href="#" class="site-header__social" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path
+                                d="M13.5 21v-8h2.7l.4-3h-3.1V8c0-.9.3-1.6 1.8-1.6h1.4V3.7C16.1 3.6 15.5 3.5 14.5 3.5c-2.2 0-3.7 1.4-3.7 4v2.5H8.2v3h2.6v8h2.7Z"
+                                fill="currentColor" />
+                        </svg>
+                    </a>
+                </div>
             </div>
 
             <button class="burger__btn" data-open="close" aria-label="Open menu" aria-expanded="false"
@@ -161,7 +184,7 @@
                         <p>We inspire cleanliness and impress with quality. Care you can see, service you can trust.</p>
                         <a href="./assets/misc/price-list.pdf" class="custom__download__btn" download>
                             <ul>
-                                <li>Download price list</li>
+                                <li>Download price</li>
                                 <li></li>
                                 <li>Open PDF file</li>
                             </ul>
@@ -173,17 +196,17 @@
                         </a>
                     </div>
                     <picture>
-                        <source type="image/webp"
-                            srcset="./assets/images/optimized/hero/girls-320.webp 320w, ./assets/images/optimized/hero/girls-640.webp 640w, ./assets/images/optimized/hero/girls-960.webp 960w"
-                            sizes="(max-width: 767px) 70vw, (max-width: 1199px) 45vw, 394px">
-                        <source type="image/jpeg"
-                            srcset="./assets/images/optimized/hero/girls-320.jpg 320w, ./assets/images/optimized/hero/girls-640.jpg 640w, ./assets/images/optimized/hero/girls-960.jpg 960w"
-                            sizes="(max-width: 767px) 70vw, (max-width: 1199px) 45vw, 394px">
-                        <img src="./assets/images/optimized/hero/girls-640.jpg" alt="Sparkle City cleaning team"
-                            loading="eager" decoding="async" fetchpriority="high" width="960" height="960">
+                        <img src="./assets/images/girls.webp" alt="Sparkle City cleaning team" loading="eager"
+                            decoding="async" fetchpriority="high" width="960" height="960">
                     </picture>
                     <div class="parallax-block"></div>
                 </div>
+                <a href="#main-services" class="about-banner__scroll" aria-label="Scroll down">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M12 2.5v16"></path>
+                        <path d="M5 12.8 12 20.2l7-7.4"></path>
+                    </svg>
+                </a>
             </div>
         </section>
 
@@ -234,14 +257,8 @@
                                 <div class="item">
                                     <div class="item__bg">
                                         <picture>
-                                            <source type="image/webp"
-                                                srcset="./assets/images/optimized/main-services/main-1-260.webp 260w, ./assets/images/optimized/main-services/main-1-520.webp 520w, ./assets/images/optimized/main-services/main-1-780.webp 780w"
-                                                sizes="(max-width: 767px) 70vw, 260px">
-                                            <source type="image/jpeg"
-                                                srcset="./assets/images/optimized/main-services/main-1-260.jpg 260w, ./assets/images/optimized/main-services/main-1-520.jpg 520w, ./assets/images/optimized/main-services/main-1-780.jpg 780w"
-                                                sizes="(max-width: 767px) 70vw, 260px">
-                                            <img src="./assets/images/optimized/main-services/main-1-520.jpg"
-                                                alt="Service" loading="lazy" decoding="async" width="780" height="780">
+                                            <img src="./assets/images/main-services/1.jpg" alt="Service" loading="lazy"
+                                                decoding="async" width="780" height="780">
                                         </picture>
                                     </div>
                                 </div>
@@ -250,14 +267,8 @@
                                 <div class="item">
                                     <div class="item__bg">
                                         <picture>
-                                            <source type="image/webp"
-                                                srcset="./assets/images/optimized/main-services/main-2-260.webp 260w, ./assets/images/optimized/main-services/main-2-520.webp 520w, ./assets/images/optimized/main-services/main-2-780.webp 780w"
-                                                sizes="(max-width: 767px) 70vw, 260px">
-                                            <source type="image/jpeg"
-                                                srcset="./assets/images/optimized/main-services/main-2-260.jpg 260w, ./assets/images/optimized/main-services/main-2-520.jpg 520w, ./assets/images/optimized/main-services/main-2-780.jpg 780w"
-                                                sizes="(max-width: 767px) 70vw, 260px">
-                                            <img src="./assets/images/optimized/main-services/main-2-520.jpg"
-                                                alt="Service" loading="lazy" decoding="async" width="780" height="780">
+                                            <img src="./assets/images/main-services/2.jpg" alt="Service" loading="lazy"
+                                                decoding="async" width="780" height="780">
                                         </picture>
                                     </div>
                                 </div>
@@ -266,14 +277,8 @@
                                 <div class="item">
                                     <div class="item__bg">
                                         <picture>
-                                            <source type="image/webp"
-                                                srcset="./assets/images/optimized/main-services/main-3-260.webp 260w, ./assets/images/optimized/main-services/main-3-520.webp 520w, ./assets/images/optimized/main-services/main-3-780.webp 780w"
-                                                sizes="(max-width: 767px) 70vw, 260px">
-                                            <source type="image/jpeg"
-                                                srcset="./assets/images/optimized/main-services/main-3-260.jpg 260w, ./assets/images/optimized/main-services/main-3-520.jpg 520w, ./assets/images/optimized/main-services/main-3-780.jpg 780w"
-                                                sizes="(max-width: 767px) 70vw, 260px">
-                                            <img src="./assets/images/optimized/main-services/main-3-520.jpg"
-                                                alt="Service" loading="lazy" decoding="async" width="780" height="780">
+                                            <img src="./assets/images/main-services/3.jpg" alt="Service" loading="lazy"
+                                                decoding="async" width="780" height="780">
                                         </picture>
                                     </div>
                                 </div>
@@ -282,14 +287,8 @@
                                 <div class="item">
                                     <div class="item__bg">
                                         <picture>
-                                            <source type="image/webp"
-                                                srcset="./assets/images/optimized/main-services/main-4-260.webp 260w, ./assets/images/optimized/main-services/main-4-520.webp 520w, ./assets/images/optimized/main-services/main-4-780.webp 780w"
-                                                sizes="(max-width: 767px) 70vw, 260px">
-                                            <source type="image/jpeg"
-                                                srcset="./assets/images/optimized/main-services/main-4-260.jpg 260w, ./assets/images/optimized/main-services/main-4-520.jpg 520w, ./assets/images/optimized/main-services/main-4-780.jpg 780w"
-                                                sizes="(max-width: 767px) 70vw, 260px">
-                                            <img src="./assets/images/optimized/main-services/main-4-520.jpg"
-                                                alt="Service" loading="lazy" decoding="async" width="780" height="780">
+                                            <img src="./assets/images/main-services/4.jpg" alt="Service" loading="lazy"
+                                                decoding="async" width="780" height="780">
                                         </picture>
                                     </div>
                                 </div>
@@ -298,14 +297,8 @@
                                 <div class="item">
                                     <div class="item__bg">
                                         <picture>
-                                            <source type="image/webp"
-                                                srcset="./assets/images/optimized/main-services/main-5-260.webp 260w, ./assets/images/optimized/main-services/main-5-520.webp 520w, ./assets/images/optimized/main-services/main-5-780.webp 780w"
-                                                sizes="(max-width: 767px) 70vw, 260px">
-                                            <source type="image/jpeg"
-                                                srcset="./assets/images/optimized/main-services/main-5-260.jpg 260w, ./assets/images/optimized/main-services/main-5-520.jpg 520w, ./assets/images/optimized/main-services/main-5-780.jpg 780w"
-                                                sizes="(max-width: 767px) 70vw, 260px">
-                                            <img src="./assets/images/optimized/main-services/main-5-520.jpg"
-                                                alt="Service" loading="lazy" decoding="async" width="780" height="780">
+                                            <img src="./assets/images/main-services/5.jpg" alt="Service" loading="lazy"
+                                                decoding="async" width="780" height="780">
                                         </picture>
                                     </div>
                                 </div>
@@ -315,12 +308,14 @@
                     <div class="reviews-nav">
                         <a href="#" class="arrow left reviews-prev"><i></i>
                             <svg class="circle" viewBox="0 0 50 50" aria-hidden="true">
-                                <circle cx="25" cy="25" r="20"></circle>
+                                <path class="arc arc-top" d="M45 25 A20 20 0 0 0 5 25"></path>
+                                <path class="arc arc-bottom" d="M45 25 A20 20 0 0 1 5 25"></path>
                             </svg>
                         </a>
                         <a href="#" class="arrow reviews-next"><i></i>
                             <svg class="circle" viewBox="0 0 50 50" aria-hidden="true">
-                                <circle cx="25" cy="25" r="20"></circle>
+                                <path class="arc arc-top" d="M45 25 A20 20 0 0 0 5 25"></path>
+                                <path class="arc arc-bottom" d="M45 25 A20 20 0 0 1 5 25"></path>
                             </svg>
                         </a>
                     </div>
@@ -338,14 +333,8 @@
                                 <div class="item">
                                     <div class="item__bg">
                                         <picture>
-                                            <source type="image/webp"
-                                                srcset="./assets/images/optimized/additional-services/add-1-260.webp 260w, ./assets/images/optimized/additional-services/add-1-520.webp 520w, ./assets/images/optimized/additional-services/add-1-780.webp 780w"
-                                                sizes="(max-width: 767px) 70vw, 260px">
-                                            <source type="image/jpeg"
-                                                srcset="./assets/images/optimized/additional-services/add-1-260.jpg 260w, ./assets/images/optimized/additional-services/add-1-520.jpg 520w, ./assets/images/optimized/additional-services/add-1-780.jpg 780w"
-                                                sizes="(max-width: 767px) 70vw, 260px">
-                                            <img src="./assets/images/optimized/additional-services/add-1-520.jpg"
-                                                alt="Service" loading="lazy" decoding="async" width="780" height="780">
+                                            <img src="./assets/images/additional-services/1.jpg" alt="Service"
+                                                loading="lazy" decoding="async" width="780" height="780">
                                         </picture>
                                     </div>
                                 </div>
@@ -354,14 +343,8 @@
                                 <div class="item">
                                     <div class="item__bg">
                                         <picture>
-                                            <source type="image/webp"
-                                                srcset="./assets/images/optimized/additional-services/add-2-260.webp 260w, ./assets/images/optimized/additional-services/add-2-520.webp 520w, ./assets/images/optimized/additional-services/add-2-780.webp 780w"
-                                                sizes="(max-width: 767px) 70vw, 260px">
-                                            <source type="image/jpeg"
-                                                srcset="./assets/images/optimized/additional-services/add-2-260.jpg 260w, ./assets/images/optimized/additional-services/add-2-520.jpg 520w, ./assets/images/optimized/additional-services/add-2-780.jpg 780w"
-                                                sizes="(max-width: 767px) 70vw, 260px">
-                                            <img src="./assets/images/optimized/additional-services/add-2-520.jpg"
-                                                alt="Service" loading="lazy" decoding="async" width="780" height="780">
+                                            <img src="./assets/images/additional-services/2.jpg" alt="Service"
+                                                loading="lazy" decoding="async" width="780" height="780">
                                         </picture>
                                     </div>
                                 </div>
@@ -370,14 +353,8 @@
                                 <div class="item">
                                     <div class="item__bg">
                                         <picture>
-                                            <source type="image/webp"
-                                                srcset="./assets/images/optimized/additional-services/add-3-260.webp 260w, ./assets/images/optimized/additional-services/add-3-520.webp 520w, ./assets/images/optimized/additional-services/add-3-780.webp 780w"
-                                                sizes="(max-width: 767px) 70vw, 260px">
-                                            <source type="image/jpeg"
-                                                srcset="./assets/images/optimized/additional-services/add-3-260.jpg 260w, ./assets/images/optimized/additional-services/add-3-520.jpg 520w, ./assets/images/optimized/additional-services/add-3-780.jpg 780w"
-                                                sizes="(max-width: 767px) 70vw, 260px">
-                                            <img src="./assets/images/optimized/additional-services/add-3-520.jpg"
-                                                alt="Service" loading="lazy" decoding="async" width="780" height="780">
+                                            <img src="./assets/images/additional-services/3.jpg" alt="Service"
+                                                loading="lazy" decoding="async" width="780" height="780">
                                         </picture>
                                     </div>
                                 </div>
@@ -386,14 +363,8 @@
                                 <div class="item">
                                     <div class="item__bg">
                                         <picture>
-                                            <source type="image/webp"
-                                                srcset="./assets/images/optimized/additional-services/add-4-260.webp 260w, ./assets/images/optimized/additional-services/add-4-520.webp 520w, ./assets/images/optimized/additional-services/add-4-780.webp 780w"
-                                                sizes="(max-width: 767px) 70vw, 260px">
-                                            <source type="image/jpeg"
-                                                srcset="./assets/images/optimized/additional-services/add-4-260.jpg 260w, ./assets/images/optimized/additional-services/add-4-520.jpg 520w, ./assets/images/optimized/additional-services/add-4-780.jpg 780w"
-                                                sizes="(max-width: 767px) 70vw, 260px">
-                                            <img src="./assets/images/optimized/additional-services/add-4-520.jpg"
-                                                alt="Service" loading="lazy" decoding="async" width="780" height="780">
+                                            <img src="./assets/images/additional-services/4.jpg" alt="Service"
+                                                loading="lazy" decoding="async" width="780" height="780">
                                         </picture>
                                     </div>
                                 </div>
@@ -402,14 +373,8 @@
                                 <div class="item">
                                     <div class="item__bg">
                                         <picture>
-                                            <source type="image/webp"
-                                                srcset="./assets/images/optimized/additional-services/add-5-260.webp 260w, ./assets/images/optimized/additional-services/add-5-520.webp 520w, ./assets/images/optimized/additional-services/add-5-780.webp 780w"
-                                                sizes="(max-width: 767px) 70vw, 260px">
-                                            <source type="image/jpeg"
-                                                srcset="./assets/images/optimized/additional-services/add-5-260.jpg 260w, ./assets/images/optimized/additional-services/add-5-520.jpg 520w, ./assets/images/optimized/additional-services/add-5-780.jpg 780w"
-                                                sizes="(max-width: 767px) 70vw, 260px">
-                                            <img src="./assets/images/optimized/additional-services/add-5-520.jpg"
-                                                alt="Service" loading="lazy" decoding="async" width="780" height="780">
+                                            <img src="./assets/images/additional-services/5.jpg" alt="Service"
+                                                loading="lazy" decoding="async" width="780" height="780">
                                         </picture>
                                     </div>
                                 </div>
@@ -419,12 +384,14 @@
                     <div class="reviews-nav">
                         <a href="#" class="arrow left reviews-prev"><i></i>
                             <svg class="circle" viewBox="0 0 50 50" aria-hidden="true">
-                                <circle cx="25" cy="25" r="20"></circle>
+                                <path class="arc arc-top" d="M45 25 A20 20 0 0 0 5 25"></path>
+                                <path class="arc arc-bottom" d="M45 25 A20 20 0 0 1 5 25"></path>
                             </svg>
                         </a>
                         <a href="#" class="arrow reviews-next"><i></i>
                             <svg class="circle" viewBox="0 0 50 50" aria-hidden="true">
-                                <circle cx="25" cy="25" r="20"></circle>
+                                <path class="arc arc-top" d="M45 25 A20 20 0 0 0 5 25"></path>
+                                <path class="arc arc-bottom" d="M45 25 A20 20 0 0 1 5 25"></path>
                             </svg>
                         </a>
                     </div>
@@ -473,7 +440,7 @@
                                     </svg>
                                 </label>
                                 <label class="wpcf7-list-item-label" for="consent">I consent to the processing of my
-                                    personal data</label>
+                                    <a href="./privacy-policy.html" class="consent-link">personal data</a></label>
                             </div>
 
                             <div class="wpcf__row submit">
@@ -494,10 +461,13 @@
             <div class="site-footer__content">
                 <div class="site-footer__brand">
                     <picture>
-                        <source type="image/webp" srcset="./assets/images/optimized/logo/logo-220.webp">
-                        <img src="./assets/images/optimized/logo/logo-220.png" alt="Sparkle City" loading="lazy"
-                            decoding="async" width="220" height="39">
+                        <img src="./assets/images/logo.png" alt="Sparkle City" loading="lazy" decoding="async"
+                            width="220" height="39">
                     </picture>
+                    <div class="site-footer__legal">
+                        <a href="#" class="site-footer__legal-link">Privacy Policy</a>
+                        <a href="#" class="site-footer__legal-link">Public Offer Agreement</a>
+                    </div>
                 </div>
                 <div class="site-footer__list">
                     <a class="site-footer__item"
@@ -570,6 +540,9 @@
             <img src="./assets/svg/phone-green.svg" alt="Phone" loading="lazy" decoding="async">
         </button>
         <div class="fixed__popup" id="messenger-popup" aria-hidden="true" inert>
+            <a href="tel:14258006565" aria-label="Phone" tabindex="-1">
+                <img src="./assets/svg/phone-green.svg" alt="Phone" loading="lazy" decoding="async">
+            </a>
             <a href="#" aria-label="WhatsApp" tabindex="-1">
                 <img src="./assets/svg/whatsapp.svg" alt="WhatsApp" loading="lazy" decoding="async">
             </a>

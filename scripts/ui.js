@@ -213,7 +213,7 @@
       return;
     }
 
-    var minDelay = 400;
+    var minDelay = 900;
     var fadeDuration = prefersReducedMotion ? 0 : 600;
     var startTime = Date.now();
 

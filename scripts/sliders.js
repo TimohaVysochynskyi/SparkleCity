@@ -97,25 +97,38 @@
       return;
     }
 
+    var animationDuration = 1050;
+    var fadeDuration = 320;
+
+    function triggerArrowAnimation(arrow) {
+      if (
+        arrow.classList.contains("animate") ||
+        arrow.classList.contains("fading")
+      ) {
+        return;
+      }
+
+      arrow.classList.add("animate");
+
+      setTimeout(function () {
+        arrow.classList.remove("animate");
+        arrow.classList.add("fading");
+
+        setTimeout(function () {
+          arrow.classList.remove("fading");
+        }, fadeDuration);
+      }, animationDuration);
+    }
+
     arrows.forEach(function (arrow) {
       arrow.addEventListener("click", function (event) {
         event.preventDefault();
-        if (!arrow.classList.contains("animate")) {
-          arrow.classList.add("animate");
-          setTimeout(function () {
-            arrow.classList.remove("animate");
-          }, 1600);
-        }
+        triggerArrowAnimation(arrow);
       });
 
       arrow.addEventListener("touchstart", function (event) {
         event.preventDefault();
-        if (!arrow.classList.contains("animate")) {
-          arrow.classList.add("animate");
-          setTimeout(function () {
-            arrow.classList.remove("animate");
-          }, 1600);
-        }
+        triggerArrowAnimation(arrow);
       });
     });
   }

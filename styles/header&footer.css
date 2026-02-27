@@ -16,44 +16,16 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: clamp(12px, 2.4vw, 23px);
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: clamp(12px, 2.2vw, 22px);
 }
 
 .site-header__logo {
   height: 34px;
   display: block;
   flex-shrink: 0;
-}
-
-.site-header__phone {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 10px;
-  padding: 6px 14px 6px 6px;
-  border-radius: 999px;
-  background: #fff;
-  border: 2px solid rgba(107, 63, 214, 0.2);
-  color: #fff;
-  font-size: clamp(12px, 1.3vw, 14px);
-  line-height: 1;
-}
-
-.site-header__phone img {
-  width: 28px;
-  height: 28px;
-  display: block;
-}
-
-.site-header__phone {
-  color: var(--primary);
-}
-
-.site-header__phone:hover {
-  border-color: var(--primary);
 }
 
 .site-header__logo img {
@@ -211,12 +183,79 @@ button.burger__btn rect {
   font-size: clamp(12px, 1.2vw, 14px);
   color: var(--text-muted);
   padding: 0;
-  margin: 0 0 0 35px;
+  margin: 0;
   gap: clamp(16px, 4vw, 50px);
 }
 
 .desktop-main-menu {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.site-header__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: clamp(12px, 2vw, 20px);
   margin-left: auto;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.site-header__email {
+  font-size: clamp(12px, 1.2vw, 14px);
+  line-height: 1;
+  color: var(--text-muted);
+  padding: 4px 0;
+}
+
+.site-header__email:hover {
+  color: var(--primary);
+}
+
+.site-header__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.site-header__social {
+  width: 24px;
+  height: 24px;
+  color: #a9a8af;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.site-header__social svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.site-header__social:hover {
+  color: var(--primary);
 }
 
 .desktop-main-menu ul li {
@@ -374,6 +413,42 @@ button.burger__btn rect {
   display: block;
 }
 
+.site-footer__brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  min-height: clamp(100px, 10vw, 130px);
+  gap: 10px;
+}
+
+.site-footer__legal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.site-footer__legal-link {
+  font-size: clamp(12px, 1.2vw, 13px);
+  line-height: 1.35;
+  color: #8f8f96;
+}
+
+.site-footer__legal-link:hover {
+  color: var(--primary);
+}
+
 .site-footer__list,
 .site-footer__socials {
   display: -webkit-box;
@@ -449,8 +524,13 @@ button.burger__btn rect {
 
 @media (max-width: 1200px) {
   .desktop-main-menu ul {
-    margin-left: 10px;
-    gap: clamp(14px, 3vw, 20px);
+    gap: clamp(12px, 2.5vw, 20px);
+  }
+}
+
+@media (max-width: 1100px) {
+  .site-header__email {
+    display: none;
   }
 }
 
@@ -469,6 +549,7 @@ button.burger__btn rect {
   .site-footer__brand {
     grid-column: 1 / -1;
     justify-self: center;
+    align-items: center;
   }
 
   .site-footer__socials {
@@ -482,14 +563,6 @@ button.burger__btn rect {
 @media (max-width: 767px) {
   .site-header__logo {
     height: 23px;
-  }
-  .site-header__phone {
-    padding: 4px 10px 4px 4px;
-    font-size: 12px;
-  }
-  .site-header__phone img {
-    width: 22px;
-    height: 22px;
   }
   .site-header .burger__btn {
     display: block;
@@ -516,7 +589,13 @@ button.burger__btn rect {
     -ms-flex-align: center;
     align-items: center;
   }
+  .site-footer__legal {
+    align-items: center;
+  }
   .desktop-main-menu {
+    display: none;
+  }
+  .site-header__right {
     display: none;
   }
   .burger__btn {
