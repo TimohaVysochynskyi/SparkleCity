@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Cleaning - Sparkle City</title>
+    <meta name="description" content="Professional cleaning. We inspire cleanliness and impress with quality.">
+    <meta name="robots" content="index, follow">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta property="og:title" content="Professional Cleaning - Sparkle City">
+    <meta property="og:description" content="Professional cleaning. We inspire cleanliness and impress with quality.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sparkle City">
+    <meta property="og:image" content="./assets/images/girls.webp">
+    <meta property="og:image:alt" content="Sparkle City cleaning team">
+    <meta property="og:locale" content="en_US">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Professional Cleaning - Sparkle City">
+    <meta name="twitter:description" content="Professional cleaning. We inspire cleanliness and impress with quality.">
+    <meta name="twitter:image" content="./assets/images/girls.webp">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "CleaningService",
+            "name": "Sparkle City",
+            "description": "Professional cleaning. We inspire cleanliness and impress with quality.",
+            "telephone": "+1-425-800-6565",
+            "email": "team@sparklecity.org",
+            "image": [
+                "./assets/images/girls.webp"
+            ],
+            "logo": "./assets/images/logo.png",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "5303 148th St SW",
+                "addressLocality": "Edmonds",
+                "addressRegion": "WA",
+                "postalCode": "98026",
+                "addressCountry": "US"
+            },
+            "areaServed": [
+                "Everett, WA",
+                "Edmonds, WA",
+                "Lynnwood, WA",
+                "Shoreline, WA",
+                "Seattle, WA",
+                "Bellevue, WA",
+                "Renton, WA",
+                "Tukwila, WA",
+                "Kent, WA",
+                "Tacoma, WA"
+            ]
+        }
+    </script>
+
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <link rel="preload" href="./fonts/Inter/Inter_24pt-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Inter/Inter_24pt-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Montserrat/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Geist/Geist-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/header&footer.css">
+    <link rel="stylesheet" href="./styles/hero.css">
+    <link rel="stylesheet" href="./styles/swiper.css">
+    <link rel="stylesheet" href="./styles/card-slider.css">
+    <link rel="stylesheet" href="./styles/form.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="./styles/animation.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="./styles/form.css">
+        <link rel="stylesheet" href="./styles/animation.css">
+    </noscript>
+</head>
+
+<body>
+    <div class="default__preloader">
+        <p>
+            <span aria-hidden="true">S</span>
+            <span aria-hidden="true">p</span>
+            <span aria-hidden="true">a</span>
+            <span aria-hidden="true">r</span>
+            <span aria-hidden="true">k</span>
+            <span aria-hidden="true">l</span>
+            <span aria-hidden="true">e</span>
+            <span aria-hidden="true">&nbsp;</span>
+            <span aria-hidden="true">C</span>
+            <span aria-hidden="true">i</span>
+            <span aria-hidden="true">t</span>
+            <span aria-hidden="true">y</span>
+        </p>
+    </div>
+
+    <script>
+        const spans = document.querySelectorAll(".default__preloader p span");
+        const numLetters = spans.length;
+        spans.forEach(function (span, i) {
+            span.style.animationDelay = i * 0.12 + "s";
+        });
+    </script>
+
+    <header class="site-header">
+        <div class="container">
+            <a href="#" class="site-header__logo">
+                <picture>
+                    <source type="image/webp" srcset="./assets/images/optimized/logo/logo-220.webp">
+                    <img src="./assets/images/optimized/logo/logo-220.png" alt="Sparkle City" decoding="async"
+                        width="220" height="39">
+                </picture>
+            </a>
+            <a href="tel:14258006565" class="site-header__phone" aria-label="Call Sparkle City">
+                <img src="./assets/svg/phone-green.svg" alt="Phone" decoding="async">
+                (425) 800-6565
+            </a>
+
+            <div class="desktop-main-menu">
+                <ul class="main__menu">
+                    <li class="menu-item"><a href="#about-us">About Us</a></li>
+                    <li class="menu-item"><a href="#main-services">Main Services</a></li>
+                    <li class="menu-item"><a href="#additional-services">Additional Services</a></li>
+                    <li class="menu-item"><a href="#order-service">Order a Service</a></li>
+                </ul>
+            </div>
+
+            <button class="burger__btn" data-open="close" aria-label="Open menu" aria-expanded="false"
+                aria-controls="mobile-menu" aria-pressed="false">
+                <svg aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                    <rect width="100%" height="1.5" ry="1" x="0" y="6.25"></rect>
+                    <rect width="100%" height="1.5" ry="1" x="0" y="11.25"></rect>
+                    <rect width="100%" height="1.5" ry="1" x="0" y="16.25"></rect>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu__overlay"></div>
+        <div class="mobile-menu__wrapper" role="dialog" aria-modal="true" aria-label="Mobile menu" tabindex="-1">
+            <div class="menu">
+                <ul class="main__menu">
+                    <li class="menu-item"><a href="#about-us">About Us</a></li>
+                    <li class="menu-item"><a href="#main-services">Main Services</a></li>
+                    <li class="menu-item"><a href="#additional-services">Additional Services</a></li>
+                    <li class="menu-item"><a href="#order-service">Order a Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="about-banner" id="about-us">
+            <div class="container">
+                <div class="about-banner__wrapper">
+                    <div class="left">
+                        <h1>Professional Cleaning</h1>
+                        <p>We inspire cleanliness and impress with quality. Care you can see, service you can trust.</p>
+                        <a href="./assets/misc/price-list.pdf" class="custom__download__btn" download>
+                            <ul>
+                                <li>Download price list</li>
+                                <li></li>
+                                <li>Open PDF file</li>
+                            </ul>
+                            <div>
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M 4,12 C 4,12 12,20 12,20 C 12,20 20,12 20,12"></path>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <picture>
+                        <source type="image/webp"
+                            srcset="./assets/images/optimized/hero/girls-320.webp 320w, ./assets/images/optimized/hero/girls-640.webp 640w, ./assets/images/optimized/hero/girls-960.webp 960w"
+                            sizes="(max-width: 767px) 70vw, (max-width: 1199px) 45vw, 394px">
+                        <source type="image/jpeg"
+                            srcset="./assets/images/optimized/hero/girls-320.jpg 320w, ./assets/images/optimized/hero/girls-640.jpg 640w, ./assets/images/optimized/hero/girls-960.jpg 960w"
+                            sizes="(max-width: 767px) 70vw, (max-width: 1199px) 45vw, 394px">
+                        <img src="./assets/images/optimized/hero/girls-640.jpg" alt="Sparkle City cleaning team"
+                            loading="eager" decoding="async" fetchpriority="high" width="960" height="960">
+                    </picture>
+                    <div class="parallax-block"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-slider">
+            <div class="container">
+                <div class="info-slider__wrapper">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <h5>Sparkle City cleaning means spotless results and a tidy, welcoming space.</h5>
+                                <p>We offer high-quality cleaning services including deep cleaning, post-construction
+                                    cleanup, and regular maintenance.
+                                    Our team uses modern equipment and trusted products to deliver the best results, so
+                                    your space looks flawless and is
+                                    ready for comfortable use.<br>
+                                    <br>
+                                    We serve Everett, Edmonds, Lynnwood, Shoreline, Seattle, Bellevue, and other
+                                    locations by request, including Renton,
+                                    Tukwila, Kent, and Tacoma. Post-construction cleanup can be a complex,
+                                    time-consuming process. Our cleaning company
+                                    specializes in detailed post-construction cleaning to help you avoid stress and
+                                    enjoy the fresh look of your home or
+                                    office. Sparkle City delivers fast, effective cleaning and takes the hassle off your
+                                    plate.<br>
+                                    <br>
+                                    We understand the importance of transparent pricing when choosing cleaning services.
+                                    Sparkle City offers competitive
+                                    rates with no hidden fees.<br>
+                                    <br>
+                                    Contact us for more details and a personalized quote. Our specialists are ready to
+                                    provide professional service that
+                                    meets your expectations and needs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cards-slider cards-slider--primary" id="main-services">
+            <div class="container">
+                <h2 class="cards-slider__title">Main Services</h2>
+                <div class="cards-slider__wrapper">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="item__bg">
+                                        <picture>
+                                            <source type="image/webp"
+                                                srcset="./assets/images/optimized/main-services/main-1-260.webp 260w, ./assets/images/optimized/main-services/main-1-520.webp 520w, ./assets/images/optimized/main-services/main-1-780.webp 780w"
+                                                sizes="(max-width: 767px) 70vw, 260px">
+                                            <source type="image/jpeg"
+                                                srcset="./assets/images/optimized/main-services/main-1-260.jpg 260w, ./assets/images/optimized/main-services/main-1-520.jpg 520w, ./assets/images/optimized/main-services/main-1-780.jpg 780w"
+                                                sizes="(max-width: 767px) 70vw, 260px">
+                                            <img src="./assets/images/optimized/main-services/main-1-520.jpg"
+                                                alt="Service" loading="lazy" decoding="async" width="780" height="780">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="item__bg">
+                                        <picture>
+                                            <source type="image/webp"
+                                                srcset="./assets/images/optimized/main-services/main-2-260.webp 260w, ./assets/images/optimized/main-services/main-2-520.webp 520w, ./assets/images/optimized/main-services/main-2-780.webp 780w"
+                                                sizes="(max-width: 767px) 70vw, 260px">
+                                            <source type="image/jpeg"
+                                                srcset="./assets/images/optimized/main-services/main-2-260.jpg 260w, ./assets/images/optimized/main-services/main-2-520.jpg 520w, ./assets/images/optimized/main-services/main-2-780.jpg 780w"
+                                                sizes="(max-width: 767px) 70vw, 260px">
+                                            <img src="./assets/images/optimized/main-services/main-2-520.jpg"
+                                                alt="Service" loading="lazy" decoding="async" width="780" height="780">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="item__bg">
+                                        <picture>
+                                            <source type="image/webp"
+                                                srcset="./assets/images/optimized/main-services/main-3-260.webp 260w, ./assets/images/optimized/main-services/main-3-520.webp 520w, ./assets/images/optimized/main-services/main-3-780.webp 780w"
+                                                sizes="(max-width: 767px) 70vw, 260px">
+                                            <source type="image/jpeg"
+                                                srcset="./assets/images/optimized/main-services/main-3-260.jpg 260w, ./assets/images/optimized/main-services/main-3-520.jpg 520w, ./assets/images/optimized/main-services/main-3-780.jpg 780w"
+                                                sizes="(max-width: 767px) 70vw, 260px">
+                                            <img src="./assets/images/optimized/main-services/main-3-520.jpg"
+                                                alt="Service" loading="lazy" decoding="async" width="780" height="780">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="item__bg">
+                                        <picture>
+                                            <source type="image/webp"
+                                                srcset="./assets/images/optimized/main-services/main-4-260.webp 260w, ./assets/images/optimized/main-services/main-4-520.webp 520w, ./assets/images/optimized/main-services/main-4-780.webp 780w"
+                                                sizes="(max-width: 767px) 70vw, 260px">
+                                            <source type="image/jpeg"
+                                                srcset="./assets/images/optimized/main-services/main-4-260.jpg 260w, ./assets/images/optimized/main-services/main-4-520.jpg 520w, ./assets/images/optimized/main-services/main-4-780.jpg 780w"
+                                                sizes="(max-width: 767px) 70vw, 260px">
+                                            <img src="./assets/images/optimized/main-services/main-4-520.jpg"
+                                                alt="Service" loading="lazy" decoding="async" width="780" height="780">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="item__bg">
+                                        <picture>
+                                            <source type="image/webp"
+                                                srcset="./assets/images/optimized/main-services/main-5-260.webp 260w, ./assets/images/optimized/main-services/main-5-520.webp 520w, ./assets/images/optimized/main-services/main-5-780.webp 780w"
+                                                sizes="(max-width: 767px) 70vw, 260px">
+                                            <source type="image/jpeg"
+                                                srcset="./assets/images/optimized/main-services/main-5-260.jpg 260w, ./assets/images/optimized/main-services/main-5-520.jpg 520w, ./assets/images/optimized/main-services/main-5-780.jpg 780w"
+                                                sizes="(max-width: 767px) 70vw, 260px">
+                                            <img src="./assets/images/optimized/main-services/main-5-520.jpg"
+                                                alt="Service" loading="lazy" decoding="async" width="780" height="780">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews-nav">
+                        <a href="#" class="arrow left reviews-prev"><i></i>
+                            <svg class="circle" viewBox="0 0 50 50" aria-hidden="true">
+                                <circle cx="25" cy="25" r="20"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" class="arrow reviews-next"><i></i>
+                            <svg class="circle" viewBox="0 0 50 50" aria-hidden="true">
+                                <circle cx="25" cy="25" r="20"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cards-slider cards-slider--additional" id="additional-services">
+            <div class="container">
+                <h2 class="cards-slider__title">Additional Services</h2>
+                <div class="cards-slider__wrapper">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="item__bg">
+                                        <picture>
+                                            <source type="image/webp"
+                                                srcset="./assets/images/optimized/additional-services/add-1-260.webp 260w, ./assets/images/optimized/additional-services/add-1-520.webp 520w, ./assets/images/optimized/additional-services/add-1-780.webp 780w"
+                                                sizes="(max-width: 767px) 70vw, 260px">
+                                            <source type="image/jpeg"
+                                                srcset="./assets/images/optimized/additional-services/add-1-260.jpg 260w, ./assets/images/optimized/additional-services/add-1-520.jpg 520w, ./assets/images/optimized/additional-services/add-1-780.jpg 780w"
+                                                sizes="(max-width: 767px) 70vw, 260px">
+                                            <img src="./assets/images/optimized/additional-services/add-1-520.jpg"
+                                                alt="Service" loading="lazy" decoding="async" width="780" height="780">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="item__bg">
+                                        <picture>
+                                            <source type="image/webp"
+                                                srcset="./assets/images/optimized/additional-services/add-2-260.webp 260w, ./assets/images/optimized/additional-services/add-2-520.webp 520w, ./assets/images/optimized/additional-services/add-2-780.webp 780w"
+                                                sizes="(max-width: 767px) 70vw, 260px">
+                                            <source type="image/jpeg"
+                                                srcset="./assets/images/optimized/additional-services/add-2-260.jpg 260w, ./assets/images/optimized/additional-services/add-2-520.jpg 520w, ./assets/images/optimized/additional-services/add-2-780.jpg 780w"
+                                                sizes="(max-width: 767px) 70vw, 260px">
+                                            <img src="./assets/images/optimized/additional-services/add-2-520.jpg"
+                                                alt="Service" loading="lazy" decoding="async" width="780" height="780">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="item__bg">
+                                        <picture>
+                                            <source type="image/webp"
+                                                srcset="./assets/images/optimized/additional-services/add-3-260.webp 260w, ./assets/images/optimized/additional-services/add-3-520.webp 520w, ./assets/images/optimized/additional-services/add-3-780.webp 780w"
+                                                sizes="(max-width: 767px) 70vw, 260px">
+                                            <source type="image/jpeg"
+                                                srcset="./assets/images/optimized/additional-services/add-3-260.jpg 260w, ./assets/images/optimized/additional-services/add-3-520.jpg 520w, ./assets/images/optimized/additional-services/add-3-780.jpg 780w"
+                                                sizes="(max-width: 767px) 70vw, 260px">
+                                            <img src="./assets/images/optimized/additional-services/add-3-520.jpg"
+                                                alt="Service" loading="lazy" decoding="async" width="780" height="780">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="item__bg">
+                                        <picture>
+                                            <source type="image/webp"
+                                                srcset="./assets/images/optimized/additional-services/add-4-260.webp 260w, ./assets/images/optimized/additional-services/add-4-520.webp 520w, ./assets/images/optimized/additional-services/add-4-780.webp 780w"
+                                                sizes="(max-width: 767px) 70vw, 260px">
+                                            <source type="image/jpeg"
+                                                srcset="./assets/images/optimized/additional-services/add-4-260.jpg 260w, ./assets/images/optimized/additional-services/add-4-520.jpg 520w, ./assets/images/optimized/additional-services/add-4-780.jpg 780w"
+                                                sizes="(max-width: 767px) 70vw, 260px">
+                                            <img src="./assets/images/optimized/additional-services/add-4-520.jpg"
+                                                alt="Service" loading="lazy" decoding="async" width="780" height="780">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="item__bg">
+                                        <picture>
+                                            <source type="image/webp"
+                                                srcset="./assets/images/optimized/additional-services/add-5-260.webp 260w, ./assets/images/optimized/additional-services/add-5-520.webp 520w, ./assets/images/optimized/additional-services/add-5-780.webp 780w"
+                                                sizes="(max-width: 767px) 70vw, 260px">
+                                            <source type="image/jpeg"
+                                                srcset="./assets/images/optimized/additional-services/add-5-260.jpg 260w, ./assets/images/optimized/additional-services/add-5-520.jpg 520w, ./assets/images/optimized/additional-services/add-5-780.jpg 780w"
+                                                sizes="(max-width: 767px) 70vw, 260px">
+                                            <img src="./assets/images/optimized/additional-services/add-5-520.jpg"
+                                                alt="Service" loading="lazy" decoding="async" width="780" height="780">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews-nav">
+                        <a href="#" class="arrow left reviews-prev"><i></i>
+                            <svg class="circle" viewBox="0 0 50 50" aria-hidden="true">
+                                <circle cx="25" cy="25" r="20"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" class="arrow reviews-next"><i></i>
+                            <svg class="circle" viewBox="0 0 50 50" aria-hidden="true">
+                                <circle cx="25" cy="25" r="20"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="form" id="order-service">
+            <div class="container">
+                <div class="form-wrapper">
+                    <h2 class="section-title">Order a Service</h2>
+                    <div class="wpcf__form">
+                        <form class="wpcf7-form" action="#" method="post" autocomplete="off">
+                            <div class="wpcf__row">
+                                <label class="visually-hidden" for="full-name">Full name</label>
+                                <input class="wpcf7-form-control wpcf7-text" placeholder="Full name*" type="text"
+                                    name="your-name" id="full-name" autocomplete="off" autocapitalize="words"
+                                    autocorrect="off" spellcheck="false" required>
+                            </div>
+                            <div class="wpcf__row">
+                                <label class="visually-hidden" for="email-address">Email address</label>
+                                <input class="wpcf7-form-control wpcf7-email wpcf7-text" placeholder="Email address*"
+                                    type="email" name="your-email" id="email-address" autocomplete="off"
+                                    autocapitalize="none" autocorrect="off" spellcheck="false" required>
+                            </div>
+                            <div class="wpcf__row">
+                                <label class="visually-hidden" for="phone-number">Phone number</label>
+                                <input class="wpcf7-form-control wpcf7-tel wpcf7-text" placeholder="Phone number*"
+                                    type="tel" name="your-tel" id="phone-number" autocomplete="off"
+                                    autocapitalize="none" autocorrect="off" spellcheck="false" required>
+                            </div>
+                            <div class="wpcf__row">
+                                <label class="visually-hidden" for="message">Message</label>
+                                <textarea class="wpcf7-form-control wpcf7-textarea" placeholder="Message..."
+                                    name="message" id="message" autocomplete="off" autocapitalize="sentences"
+                                    autocorrect="off" spellcheck="false"></textarea>
+                            </div>
+
+                            <div class="wpcf__row checkout">
+                                <label class="radio">
+                                    <input type="checkbox" name="checkbox" class="req_check" id="consent" required>
+                                    <svg viewBox="0 0 24 24">
+                                        <circle class="top" cx="12" cy="-12" r="8"></circle>
+                                        <circle class="dot" cx="12" cy="12" r="5"></circle>
+                                        <circle class="drop" cx="12" cy="12" r="2"></circle>
+                                    </svg>
+                                </label>
+                                <label class="wpcf7-list-item-label" for="consent">I consent to the processing of my
+                                    personal data</label>
+                            </div>
+
+                            <div class="wpcf__row submit">
+                                <button type="submit" class="button__plain" disabled>
+                                    Submit request
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="site-footer__content">
+                <div class="site-footer__brand">
+                    <picture>
+                        <source type="image/webp" srcset="./assets/images/optimized/logo/logo-220.webp">
+                        <img src="./assets/images/optimized/logo/logo-220.png" alt="Sparkle City" loading="lazy"
+                            decoding="async" width="220" height="39">
+                    </picture>
+                </div>
+                <div class="site-footer__list">
+                    <a class="site-footer__item"
+                        href="https://maps.google.com/?q=5303%20148th%20St%20SW%20Edmonds%20WA%2098026" target="_blank"
+                        rel="noopener">
+                        <span class="site-footer__icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" aria-hidden="true">
+                                <path fill="currentColor"
+                                    d="M10 20S3 10.87 3 7a7 7 0 1 1 14 0c0 3.87-7 13-7 13zm0-11a2 2 0 1 0 0-4a2 2 0 0 0 0 4z" />
+                            </svg>
+                        </span>
+                        <span>5303 148th St SW, Edmonds WA 98026</span>
+                    </a>
+                    <a class="site-footer__item" href="mailto:team@sparklecity.org">
+                        <span class="site-footer__icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 432 384" aria-hidden="true">
+                                <path fill="currentColor"
+                                    d="M384 21q18 0 30.5 12.5T427 64v256q0 18-12.5 30.5T384 363H43q-18 0-30.5-12.5T0 320V64q0-18 12.5-30.5T43 21h341zm0 86V64L213 171L43 64v43l170 106z" />
+                            </svg>
+                        </span>
+                        <span>team@sparklecity.org</span>
+                    </a>
+                </div>
+                <div class="site-footer__socials">
+
+                    <a class="site-footer__item" href="#" aria-label="Instagram">
+                        <span class="site-footer__icon site-footer__icon--outline" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 432 432" aria-hidden="true">
+                                <path fill="currentColor"
+                                    d="M384 99V56q0-11-11-11h-42q-11 0-11 11v43q0 10 11 10h42q11 0 11-10zM53 387h320q11 0 11-11V195h-45q2 12 2 21q0 53-37.5 90.5T213 344t-90.5-37.5T85 216q0-11 2-21H43v181q0 11 10 11zm160.5-256q-35.5 0-60.5 25t-25 60t25 60t60.5 25t60.5-25t25-60t-25-60t-60.5-25zM384 3q18 0 30.5 12.5T427 45v342q0 17-12.5 29.5T384 429H43q-18 0-30.5-12.5T0 387V45q0-17 12.5-29.5T43 3h341z" />
+                        </span>
+                        <span>Instagram</span>
+                    </a>
+                    <a class="site-footer__item" href="#" aria-label="Facebook">
+                        <span class="site-footer__icon site-footer__icon--outline" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" aria-hidden="true">
+                                <path fill="currentColor" fill-rule="evenodd"
+                                    d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.792C0 19.506.494 20 1.104 20h9.578v-7.745H8.076V9.237h2.606V7.01c0-2.584 1.578-3.99 3.883-3.99c1.104 0 2.052.082 2.329.119v2.7h-1.598c-1.254 0-1.496.596-1.496 1.47v1.927h2.989l-.39 3.018h-2.6V20h5.097c.61 0 1.104-.494 1.104-1.104V1.104C20 .494 19.506 0 18.896 0Z" />
+                            </svg>
+                        </span>
+                        <span>Facebook</span>
+                    </a>
+                    <a class="site-footer__item" href="#" aria-label="YouTube">
+                        <span class="site-footer__icon site-footer__icon--outline" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 768" aria-hidden="true">
+                                <path fill="currentColor"
+                                    d="M928 736q-222 32-416 32q-86 0-190-8t-165-16l-61-8q-27-5-47.5-37.5t-30-78.5t-14-86T0 461V307Q0 52 96 32Q318 0 512 0q86 0 190 8t165 16l61 8q29 4 49.5 36.5T1007 148t13 86t4 73v154q0 36-3 73t-12 85t-30 80t-51 37zM693 359L431 199q-11-10-29-5.5T384 208v352q0 11 18 15t29-6l262-160q11-10 11-25t-11-25z" />
+                            </svg>
+                        </span>
+                        <span>YouTube</span>
+                    </a>
+                    <a class="site-footer__item" href="#" aria-label="TikTok">
+                        <span class="site-footer__icon site-footer__icon--outline" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="currentColor"
+                                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02c.08 1.53.63 3.09 1.75 4.17c1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97c-.57-.26-1.1-.59-1.62-.93c-.01 2.92.01 5.84-.02 8.75c-.08 1.4-.54 2.79-1.35 3.94c-1.31 1.92-3.58 3.17-5.91 3.21c-1.43.08-2.86-.31-4.08-1.03c-2.02-1.19-3.44-3.37-3.65-5.71c-.02-.5-.03-1-.01-1.49c.18-1.9 1.12-3.72 2.58-4.96c1.66-1.44 3.98-2.13 6.15-1.72c.02 1.48-.04 2.96-.04 4.44c-.99-.32-2.15-.23-3.02.37c-.63.41-1.11 1.04-1.36 1.75c-.21.51-.15 1.07-.14 1.61c.24 1.64 1.82 3.02 3.5 2.87c1.12-.01 2.19-.66 2.77-1.61c.19-.33.4-.67.41-1.06c.1-1.79.06-3.57.07-5.36c.01-4.03-.01-8.05.02-12.07z" />
+                            </svg>
+                        </span>
+                        <span>TikTok</span>
+                    </a>
+                </div>
+            </div>
+            <div class="site-footer__copy">(c) All rights reserved, 2026</div>
+        </div>
+    </footer>
+
+    <div class="fixed__phone fixed__messengers" aria-label="Messenger shortcuts">
+        <button class="fixed__phone-btn" type="button" aria-label="Open messengers" aria-expanded="false"
+            aria-controls="messenger-popup">
+            <img src="./assets/svg/phone-green.svg" alt="Phone" loading="lazy" decoding="async">
+        </button>
+        <div class="fixed__popup" id="messenger-popup" aria-hidden="true" inert>
+            <a href="#" aria-label="WhatsApp" tabindex="-1">
+                <img src="./assets/svg/whatsapp.svg" alt="WhatsApp" loading="lazy" decoding="async">
+            </a>
+            <a href="#" aria-label="Telegram" tabindex="-1">
+                <img src="./assets/svg/telegram.svg" alt="Telegram" loading="lazy" decoding="async">
+            </a>
+            <a href="#" aria-label="Viber" tabindex="-1">
+                <img src="./assets/svg/viber.svg" alt="Viber" loading="lazy" decoding="async">
+            </a>
+            <a href="#" aria-label="Messenger" tabindex="-1">
+                <img src="./assets/svg/messenger.svg" alt="Messenger" loading="lazy" decoding="async">
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.1/swiper-bundle.min.js" defer></script>
+    <script src="./scripts/ui.js" defer></script>
+    <script src="./scripts/sliders.js" defer></script>
+    <script src="./scripts/animations.js" defer></script>
+</body>
+
+</html>

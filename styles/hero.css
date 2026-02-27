@@ -1,0 +1,478 @@
+.about-banner {
+  position: relative;
+}
+.about-banner__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: clamp(16px, 3vw, 28px);
+  padding: clamp(24px, 4vw, 32px) clamp(20px, 7vw, 96px) 0
+    clamp(20px, 8vw, 140px);
+  -webkit-backdrop-filter: blur(80px);
+  backdrop-filter: blur(80px);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.47) 100%
+  );
+  border-radius: 0;
+  overflow: hidden;
+  position: relative;
+}
+.about-banner__wrapper .left {
+  max-width: min(496px, 100%);
+}
+.about-banner__wrapper .left h1 {
+  font-size: clamp(28px, 4vw, 44px);
+  text-align: center;
+  margin-bottom: 10px;
+}
+.about-banner__wrapper .left p {
+  text-align: center;
+  color: var(--primary);
+}
+.about-banner__wrapper img {
+  width: clamp(220px, 32vw, 420px);
+  max-width: 55%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  max-height: 55vh;
+  object-fit: contain;
+  display: block;
+}
+.about-banner__wrapper .parallax-block {
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  width: 250px;
+  height: 250px;
+  background: #a58cf0;
+  opacity: 0.75;
+  border-radius: 50%;
+  -webkit-filter: blur(75px);
+  filter: blur(75px);
+  z-index: -1;
+  will-change: transform;
+}
+
+.custom__download__btn {
+  --background: var(--primary);
+  --rectangle: var(--primary-dark);
+  --success: var(--primary-light);
+  --text: #fff;
+  --arrow: #fff;
+  --checkmark: #fff;
+  --shadow: rgba(10, 22, 50, 0.24);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  text-decoration: none;
+  background: var(--background);
+  border-radius: 40px;
+  -webkit-transition:
+    background 0.5s,
+    -webkit-transform 0.2s ease,
+    -webkit-box-shadow 0.2s ease;
+  transition:
+    background 0.5s,
+    -webkit-transform 0.2s ease,
+    -webkit-box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.5s;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.5s,
+    -webkit-transform 0.2s ease,
+    -webkit-box-shadow 0.2s ease;
+}
+.custom__download__btn:hover {
+  background: var(--success);
+}
+.custom__download__btn ul {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin: 0;
+  padding: 15px 18px 15px 30px;
+  list-style: none;
+  text-align: center;
+  position: relative;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  font-size: clamp(16px, 2.4vw, 28px);
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+.custom__download__btn ul li:not(:first-child) {
+  top: 15px;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+.custom__download__btn ul li:nth-child(2) {
+  top: 76px;
+}
+.custom__download__btn ul li:nth-child(3) {
+  top: 136px;
+}
+.custom__download__btn > div {
+  position: relative;
+  width: 62px;
+  background: var(--rectangle);
+}
+.custom__download__btn > div:before,
+.custom__download__btn > div:after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+.custom__download__btn > div:before {
+  width: 3px;
+  top: 50%;
+  left: 50%;
+  border-radius: 3px;
+  height: 24px;
+  margin: -12px 0 0 -1.5px;
+  background: var(--arrow);
+}
+.custom__download__btn > div:after {
+  width: 62px;
+  height: 100%;
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  border-radius: 0 0 80% 80%;
+  background: var(--success);
+  top: 0;
+  left: 0;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+}
+.custom__download__btn > div svg {
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 50%;
+  top: 50%;
+  margin: -7px 0 0 -12px;
+  fill: none;
+  z-index: 1;
+  stroke-width: 3px;
+  stroke: var(--arrow);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.custom__download__btn.loading ul {
+  -webkit-animation: text calc(var(--duration) * 1ms) linear forwards
+    calc(var(--duration) * 0.065ms);
+  animation: text calc(var(--duration) * 1ms) linear forwards
+    calc(var(--duration) * 0.065ms);
+}
+.custom__download__btn.loading > div:before {
+  -webkit-animation: line calc(var(--duration) * 1ms) linear forwards
+    calc(var(--duration) * 0.065ms);
+  animation: line calc(var(--duration) * 1ms) linear forwards
+    calc(var(--duration) * 0.065ms);
+}
+.custom__download__btn.loading > div:after {
+  -webkit-animation: background calc(var(--duration) * 1ms) linear forwards
+    calc(var(--duration) * 0.065ms);
+  animation: background calc(var(--duration) * 1ms) linear forwards
+    calc(var(--duration) * 0.065ms);
+}
+.custom__download__btn.loading > div svg {
+  -webkit-animation: svg calc(var(--duration) * 1ms) linear forwards
+    calc(var(--duration) * 0.065ms);
+  animation: svg calc(var(--duration) * 1ms) linear forwards
+    calc(var(--duration) * 0.065ms);
+}
+
+@-webkit-keyframes text {
+  10%,
+  85% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  95%,
+  100% {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
+  }
+}
+@keyframes text {
+  10%,
+  85% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  95%,
+  100% {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
+  }
+}
+@-webkit-keyframes line {
+  5%,
+  10% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  65% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  75%,
+  100% {
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+}
+@keyframes line {
+  5%,
+  10% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  65% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  75%,
+  100% {
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+}
+@-webkit-keyframes svg {
+  0%,
+  20% {
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+  }
+  21%,
+  89% {
+    stroke-dasharray: 26px;
+    stroke-dashoffset: 26px;
+    stroke-width: 5px;
+    width: 27px;
+    height: 27px;
+    margin: -13.5px 0 0 -13.5px;
+    stroke: var(--checkmark);
+  }
+  100% {
+    stroke-dasharray: 26px;
+    stroke-dashoffset: 0;
+    width: 27px;
+    height: 27px;
+    margin: -13.5px 0 0 -13.5px;
+    stroke: var(--checkmark);
+  }
+  12% {
+    opacity: 1;
+  }
+  20%,
+  89% {
+    opacity: 0;
+  }
+  90%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes svg {
+  0%,
+  20% {
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+  }
+  21%,
+  89% {
+    stroke-dasharray: 26px;
+    stroke-dashoffset: 26px;
+    stroke-width: 5px;
+    width: 27px;
+    height: 27px;
+    margin: -13.5px 0 0 -13.5px;
+    stroke: var(--checkmark);
+  }
+  100% {
+    stroke-dasharray: 26px;
+    stroke-dashoffset: 0;
+    width: 27px;
+    height: 27px;
+    margin: -13.5px 0 0 -13.5px;
+    stroke: var(--checkmark);
+  }
+  12% {
+    opacity: 1;
+  }
+  20%,
+  89% {
+    opacity: 0;
+  }
+  90%,
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes background {
+  10% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+  40% {
+    -webkit-transform: scaleY(0.15);
+    transform: scaleY(0.15);
+  }
+  65% {
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    border-radius: 0 0 50% 50%;
+  }
+  75% {
+    border-radius: 0 0 50% 50%;
+  }
+  90%,
+  100% {
+    border-radius: 0;
+  }
+  75%,
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+@keyframes background {
+  10% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+  40% {
+    -webkit-transform: scaleY(0.15);
+    transform: scaleY(0.15);
+  }
+  65% {
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    border-radius: 0 0 50% 50%;
+  }
+  75% {
+    border-radius: 0 0 50% 50%;
+  }
+  90%,
+  100% {
+    border-radius: 0;
+  }
+  75%,
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+@media (max-width: 1199px) {
+  .about-banner__wrapper {
+    padding: clamp(28px, 5vw, 40px) clamp(20px, 6vw, 40px) 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .about-banner__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: clamp(48px, 10vw, 80px) clamp(20px, 8vw, 56px) 0;
+    overflow: unset;
+  }
+  .about-banner__wrapper .left h1 {
+    margin-bottom: 10px;
+  }
+  .about-banner__wrapper img {
+    max-width: min(100%, 420px);
+  }
+  .about-banner__wrapper .parallax-block {
+    top: unset;
+    bottom: 70px;
+    left: calc(50% - 125px);
+  }
+}
+
+@media (max-width: 767px) {
+  .about-banner {
+    padding-bottom: clamp(56px, 12vw, 84px);
+  }
+  .about-banner__wrapper {
+    padding: clamp(48px, 12vw, 80px) clamp(12px, 4vw, 20px) 0;
+    gap: clamp(6px, 2vw, 12px);
+    position: relative;
+  }
+  .about-banner__wrapper .left {
+    max-width: 400px;
+  }
+  .about-banner__wrapper .left h1 {
+    margin-bottom: 8px;
+  }
+  .about-banner__wrapper .left p {
+    font-size: clamp(14px, 3.2vw, 16px);
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .about-banner__wrapper .left .custom__download__btn {
+    position: absolute;
+    left: 0;
+    bottom: clamp(-76px, -14vw, -60px);
+    width: 100%;
+  }
+  .about-banner__wrapper .left .custom__download__btn ul {
+    padding-left: 10px;
+    padding-right: 8px;
+  }
+  .about-banner__wrapper .parallax-block {
+    width: 200px;
+    height: 200px;
+    bottom: 50px;
+  }
+  .custom__download__btn ul {
+    font-size: clamp(14px, 4.2vw, 18px);
+  }
+}
+
+@media (max-width: 359px) {
+  .about-banner__wrapper .left .custom__download__btn {
+    width: calc(100% + 30px);
+    margin: 0 -15px;
+  }
+  .custom__download__btn ul {
+    font-size: clamp(14px, 4vw, 16px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-banner__wrapper .parallax-block {
+    transform: none !important;
+  }
+}

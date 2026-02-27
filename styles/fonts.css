@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "Geist";
+  src:
+    url("../fonts/Geist/Geist-Regular.woff2") format("woff2"),
+    url("../fonts/Geist/Geist-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geist";
+  src:
+    url("../fonts/Geist/Geist-Medium.woff2") format("woff2"),
+    url("../fonts/Geist/Geist-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src:
+    url("../fonts/Montserrat/Montserrat-Regular.woff2") format("woff2"),
+    url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src:
+    url("../fonts/Montserrat/Montserrat-Medium.woff2") format("woff2"),
+    url("../fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src:
+    url("../fonts/Inter/Inter_24pt-Regular.woff2") format("woff2"),
+    url("../fonts/Inter/Inter_24pt-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src:
+    url("../fonts/Inter/Inter_24pt-Medium.woff2") format("woff2"),
+    url("../fonts/Inter/Inter_24pt-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
