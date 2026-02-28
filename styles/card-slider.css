@@ -191,43 +191,9 @@
   transform: rotate(45deg);
 }
 
-.cards-slider__wrapper .reviews-nav .arrow:before,
-.cards-slider__wrapper .reviews-nav .arrow:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border-radius: 50%;
-  border: 2px solid var(--border);
-}
-
-.cards-slider__wrapper .reviews-nav .arrow:before {
-  -webkit-transition:
-    border-color 0.35s ease,
-    -webkit-box-shadow 0.35s ease;
-  transition:
-    border-color 0.35s ease,
-    -webkit-box-shadow 0.35s ease;
-  transition:
-    border-color 0.35s ease,
-    box-shadow 0.35s ease;
-  transition:
-    border-color 0.35s ease,
-    box-shadow 0.35s ease,
-    -webkit-box-shadow 0.35s ease;
-}
-
-.cards-slider__wrapper .reviews-nav .arrow:after {
-  display: none;
-}
-
-.cards-slider__wrapper .reviews-nav .arrow:hover:before {
-  border-color: rgba(107, 63, 214, 0.22);
-  -webkit-box-shadow: 0 8px 18px rgba(75, 42, 166, 0.18);
-  box-shadow: 0 8px 18px rgba(75, 42, 166, 0.18);
+.cards-slider__wrapper .reviews-nav .arrow:hover {
+  -webkit-filter: drop-shadow(0 8px 18px rgba(75, 42, 166, 0.18));
+  filter: drop-shadow(0 8px 18px rgba(75, 42, 166, 0.18));
 }
 
 .cards-slider__wrapper .reviews-nav .arrow svg {
@@ -240,7 +206,6 @@
 
 .cards-slider__wrapper .reviews-nav .arrow svg path {
   fill: none;
-  stroke: var(--active);
   stroke-width: 3px;
   stroke-linecap: round;
 }
@@ -249,18 +214,19 @@
   pointer-events: none;
 }
 
-.cards-slider__wrapper .reviews-nav .arrow .circle .arc {
-  opacity: 0;
-  stroke-dasharray: 0 63;
-  -webkit-transition: opacity 0.28s ease;
-  transition: opacity 0.28s ease;
+.cards-slider__wrapper .reviews-nav .arrow .circle .base {
+  opacity: 1;
+  stroke: var(--border);
+  stroke-width: 2.4px;
+  stroke-dasharray: 73 73;
 }
 
-.cards-slider__wrapper .reviews-nav .arrow.animate:before,
-.cards-slider__wrapper .reviews-nav .arrow.animate:after {
-  border-color: var(--border);
-  -webkit-box-shadow: none;
-  box-shadow: none;
+.cards-slider__wrapper .reviews-nav .arrow .circle .arc {
+  opacity: 0;
+  stroke-dasharray: 0 73;
+  stroke: var(--active);
+  -webkit-transition: opacity 0.28s ease;
+  transition: opacity 0.28s ease;
 }
 
 .cards-slider__wrapper .reviews-nav .arrow.animate .circle .arc-top {
@@ -408,44 +374,44 @@
 @-webkit-keyframes borderArcTop {
   0% {
     opacity: 1;
-    stroke-dasharray: 0 63;
+    stroke-dasharray: 0 73;
   }
   100% {
     opacity: 1;
-    stroke-dasharray: 63 63;
+    stroke-dasharray: 73 73;
   }
 }
 
 @keyframes borderArcTop {
   0% {
     opacity: 1;
-    stroke-dasharray: 0 63;
+    stroke-dasharray: 0 73;
   }
   100% {
     opacity: 1;
-    stroke-dasharray: 63 63;
+    stroke-dasharray: 73 73;
   }
 }
 
 @-webkit-keyframes borderArcBottom {
   0% {
     opacity: 1;
-    stroke-dasharray: 0 63;
+    stroke-dasharray: 0 73;
   }
   100% {
     opacity: 1;
-    stroke-dasharray: 63 63;
+    stroke-dasharray: 73 73;
   }
 }
 
 @keyframes borderArcBottom {
   0% {
     opacity: 1;
-    stroke-dasharray: 0 63;
+    stroke-dasharray: 0 73;
   }
   100% {
     opacity: 1;
-    stroke-dasharray: 63 63;
+    stroke-dasharray: 73 73;
   }
 }
 

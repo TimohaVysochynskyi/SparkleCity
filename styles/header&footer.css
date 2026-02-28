@@ -377,6 +377,67 @@ button.burger__btn rect {
   background-color: #efefef;
 }
 
+.mobile-menu__bottom {
+  padding: 0 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.mobile-menu__phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  border-radius: 999px;
+  padding: 6px 12px 6px 8px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  min-width: 0;
+  white-space: nowrap;
+  -webkit-box-shadow: 0 10px 24px rgba(75, 42, 166, 0.2);
+  box-shadow: 0 10px 24px rgba(75, 42, 166, 0.2);
+}
+
+.mobile-menu__phone img {
+  width: 22px;
+  height: 22px;
+  display: block;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.mobile-menu__phone span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mobile-menu__bottom .site-header__socials {
+  gap: 12px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.mobile-menu__bottom .site-header__social {
+  width: 20px;
+  height: 20px;
+  color: var(--primary);
+}
+
 .site-footer {
   background: linear-gradient(180deg, #ffffff 0%, #f3edff 100%);
   padding: clamp(24px, 6vw, 40px) 0 clamp(28px, 7vw, 48px);
@@ -588,6 +649,20 @@ button.burger__btn rect {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+  }
+  .site-footer__socials {
+    width: 100%;
+    max-width: 320px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 10px 18px;
+  }
+  .site-footer__socials .site-footer__item {
+    width: calc(50% - 9px);
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
   .site-footer__legal {
     align-items: center;
